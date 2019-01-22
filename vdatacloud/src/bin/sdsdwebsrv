@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Create_date: 2018-09-18
+#Author: tangcheng
+
+exec_path=`dirname $0`
+cd $exec_path/../lib
+if [ -f sdsd_web_srv.pyc ]; then
+    ../pyenv/bin/python sdsd_web_srv.pyc $*
+else
+    ../pyenv/bin/python sdsd_web_srv.py $*
+fi
